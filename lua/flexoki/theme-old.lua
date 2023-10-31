@@ -1,13 +1,9 @@
-local palette = require('flexoki.palette')
+local c = require('flexoki.palette')
 
 local hl = vim.api.nvim_set_hl
+local theme = {}
 
-local M = {}
-
-M.set_highlights = function()
-	local c = palette.palette()
-
-	print(c._name)
+theme.set_highlights = function()
 
 	-- highlights
 	hl(0, "Normal", { fg = c.fg, bg = c.bg })
@@ -345,4 +341,4 @@ M.set_highlights = function()
 	hl(0, "CmpItemKindTypeParameter", { fg = c.red, bg = 'NONE' })
 end
 
-return M
+return theme

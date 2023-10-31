@@ -1,4 +1,4 @@
 lua << EOF
-local flexoki = require("flexoki")
-flexoki.setup({ variant = 'light' })
+local flexoki = require('flexoki')
+flexoki.colorscheme({ variant = 'light' })
 EOF
