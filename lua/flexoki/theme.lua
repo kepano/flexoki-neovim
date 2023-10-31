@@ -7,8 +7,6 @@ local M = {}
 M.set_highlights = function()
 	local c = palette.palette()
 
-	print(c._name)
-
 	-- highlights
 	hl(0, "Normal", { fg = c.fg, bg = c.bg })
 	hl(0, "SignColumn", { fg = 'NONE', bg = c.bg })

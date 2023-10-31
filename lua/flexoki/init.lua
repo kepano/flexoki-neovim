@@ -7,8 +7,6 @@ local M = {}
 M.colorscheme = function(opts)
 	config.extend(opts)
 
-	print(config.options.variant)
-
 	vim.o.termguicolors = true
 
 	if vim.g.colors_name then

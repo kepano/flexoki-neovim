@@ -112,8 +112,6 @@ local variants = {
 }
 
 M.palette = function ()
-	print(config.options.variant)
-
 	if config.options.variant == 'auto' then
 		if vim.o.background == 'dark' then
 			return variants[config.options.dark_variant]
