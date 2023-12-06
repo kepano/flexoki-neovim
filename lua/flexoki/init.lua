@@ -16,7 +16,7 @@ M.colorscheme = function(opts)
 
 	vim.g.colors_name = 'flexoki'
 
-	require('flexoki.theme').set_highlights()
+	require('flexoki.theme').set_highlights(opts)
 end
 
 ---Set up the Flexoki colorscheme
