@@ -1,19 +1,28 @@
+local config = require('flexoki.config')
+
 local M = {}
 
-M.setup = function(opts)
-	local theme = opts.variant == 'light' and require('flexoki.theme-light') or require('flexoki.theme')
+---Load the Flexoki colorscheme
+---@param opts FlexokiOptions
+M.colorscheme = function(opts)
+	config.extend(opts)
 
-	vim.cmd('hi clear')
+	vim.o.termguicolors = true
 
-	vim.o.background = 'dark'
-	if vim.fn.exists('syntax_on') then
+	if vim.g.colors_name then
+		vim.cmd('hi clear')
 		vim.cmd('syntax reset')
 	end
 
-	vim.o.termguicolors = true
 	vim.g.colors_name = 'flexoki'
 
-	theme.set_highlights()
+	require('flexoki.theme').set_highlights(opts)
+end
+
+---Set up the Flexoki colorscheme
+---@param opts FlexokiOptions
+M.setup = function (opts)
+	config.extend(opts)
 end
 
 return M
