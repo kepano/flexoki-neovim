@@ -113,10 +113,10 @@ M.groups = function()
 		-- The MatchWord groups don't actually exist, but we define them here
 		-- to link to them in plugin specific files instead of redefining the
 		-- same group multiple times
-		["MatchWord"]      = { fg = 'NONE', bg = c['ui'], underline = true, },
-		["MatchParen"]     = { fg = 'NONE', bg = c['ui'], underline = true, },
-		["MatchWordCur"]   = { fg = 'NONE', bg = 'NONE',  underline = true, },
-		["MatchParenCur"]  = { fg = 'NONE', bg = 'NONE',  underline = true, },
+		["MatchWord"]      = { fg = 'NONE', bg = c['ui-2'] },
+		["MatchParen"]     = { fg = 'NONE', bg = c['ui-2'] },
+		["MatchWordCur"]   = { fg = 'NONE', bg = 'NONE'  },
+		["MatchParenCur"]  = { fg = 'NONE', bg = 'NONE'  },
 
 		["Conceal"]   = { fg = 'NONE',  bg = 'NONE' },
 		["Directory"] = { fg = c['bl'], bg = 'NONE' },

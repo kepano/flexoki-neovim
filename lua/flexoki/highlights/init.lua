@@ -5,6 +5,7 @@ M.groups = function ()
 	-- This could be done dynamically by looking for all files, but this approach is fine and is safer
 	local modules = {
 		require('flexoki.highlights.base').groups(),
+		require('flexoki.highlights.mini-nvim').groups(),
 		-- require('flexoki.highlights.buffer').groups(),
 		-- require('flexoki.highlights.cmp').groups(),
 		-- require('flexoki.highlights.dashboard').groups(),
