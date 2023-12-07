@@ -6,6 +6,7 @@ M.groups = function ()
 	local modules = {
 		require('flexoki.highlights.base').groups(),
 		require('flexoki.highlights.mini-nvim').groups(),
+		require('flexoki.highlights.flash-nvim').groups(),
 		-- require('flexoki.highlights.buffer').groups(),
 		-- require('flexoki.highlights.cmp').groups(),
 		-- require('flexoki.highlights.dashboard').groups(),
