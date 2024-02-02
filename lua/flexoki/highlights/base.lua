@@ -19,11 +19,11 @@ M.groups = function()
 		["SpellRare"]  = { fg = c['pu'],   bg = 'NONE', underline = true, },
 
 		["NonText"]     = { fg = c['tx-3'], bg = 'NONE' },
-		["EndOfBuffer"] = { fg = 'NONE', bg    = 'NONE' },
+		["EndOfBuffer"] = { fg = 'NONE',    bg = 'NONE' },
 
-		["Search"]     = { fg = c['bg'], bg = c['cy-2'] },
-		["IncSearch"]  = { fg = c['bg'], bg = c['cy-2'] },
-		["Substitute"] = { fg = 'NONE',  bg = c['cy'] },
+		["Search"]     = { fg = c['bg'],  bg = c['cy-2'] },
+		["IncSearch"]  = { fg = c['bg'],  bg = c['cy-2'] },
+		["Substitute"] = { fg = c['bg'],  bg = c['cy-2'] },
 
 		["DiffAdd"]    = { fg = c['bg'],   bg = c['gr'] },
 		["DiffChange"] = { fg = c['bg-2'], bg = c['pu'] },
