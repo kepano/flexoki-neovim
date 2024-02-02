@@ -21,8 +21,8 @@ M.groups = function()
 		["NonText"]     = { fg = c['tx-3'], bg = 'NONE' },
 		["EndOfBuffer"] = { fg = 'NONE', bg    = 'NONE' },
 
-		["Search"]     = { fg = c['tx'], bg = c['cy-2'] },
-		["IncSearch"]  = { fg = c['tx'], bg = c['cy-2'] },
+		["Search"]     = { fg = c['bg'], bg = c['cy-2'] },
+		["IncSearch"]  = { fg = c['bg'], bg = c['cy-2'] },
 		["Substitute"] = { fg = 'NONE',  bg = c['cy'] },
 
 		["DiffAdd"]    = { fg = c['bg'],   bg = c['gr'] },
