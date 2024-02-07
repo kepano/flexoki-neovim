@@ -6,11 +6,10 @@ local M = {}
 
 ---@param opts FlexokiOptions
 M.set_highlights = function(opts)
-
 	local highlight_groups = highlights.groups()
 
 	-- Set users highlight_group customisations.
-	if not opts.highlight_groups == nil then
+	if opts.highlight_groups ~= nil then
 		for group, highlight in pairs(opts.highlight_groups) do
 			highlight_groups[group] = highlight
 		end
