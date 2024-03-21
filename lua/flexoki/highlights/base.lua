@@ -2,7 +2,8 @@ local palette = require('flexoki.palette')
 
 local M = {}
 
-M.groups = function()
+---@param opts FlexokiOptions
+M.groups = function(opts)
 	local c = palette.palette()
 
 	--- @type table<string, vim.api.keyset.highlight>
@@ -42,14 +43,14 @@ M.groups = function()
 		["Float"]     = { fg = c['pu'], bg = 'NONE' },
 
 		["Identifier"] = { fg = c['bl'], bg = 'NONE' },
-		["Function"]   = { fg = c['or'], bg = 'NONE' },
+		["Function"]   = { fg = c['or'], bg = 'NONE', italic = true },
 
 		["Statement"]   = { fg   = 'NONE',    bg = 'NONE'   },
 		["Conditional"] = { link = 'Keyword'                },
 		["Repeat"]      = { link = 'Keyword'                },
 		["Label"]       = { link = 'Keyword'                },
 		["Operator"]    = { fg   = c['tx-2'], bg   = 'NONE' },
-		["Keyword"]     = { fg   = c['gr'],   bg   = 'NONE' },
+		["Keyword"]     = { fg   = c['gr'],   bg   = 'NONE', italic = true },
 		["Exception"]   = { link = 'Keyword'                },
 
 		["PreProc"]   = { fg = c['ma'], bg = 'NONE' },
@@ -104,8 +105,8 @@ M.groups = function()
 		["LineNr"]         = { fg = c['tx-3'], bg = 'NONE' },
 		["FloatBorder"]    = { fg = c['tx-3'], bg = c['bg-2'] },
 		["Whitespace"]     = { fg = c['tx-3'], bg = 'NONE' },
-		["WinSeparator"]   = { fg = c['ui'],   bg = c['ui'] },
-		["WinSeparatorNC"] = { fg = c['ui-3'], bg = c['ui-3'] },
+		["WinSeparator"]   = { fg = c['ui'],   bg = 'NONE' },
+		["WinSeparatorNC"] = { fg = c['ui-3'], bg = 'NONE' },
 		["NormalFloat"]    = { fg = c['tx-2'], bg = c['bg-2'] },
 		["WarningMsg"]     = { fg = c['re'],   bg = c['bg'] },
 		["QuickFixLine"]   = { fg = 'NONE',    bg = c['ui2_blue'] },

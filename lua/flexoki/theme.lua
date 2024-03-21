@@ -1,4 +1,4 @@
-local highlights = require('flexoki.highlights')
+local highlights = require("flexoki.highlights")
 
 local hl = vim.api.nvim_set_hl
 
@@ -6,7 +6,7 @@ local M = {}
 
 ---@param opts FlexokiOptions
 M.set_highlights = function(opts)
-	local highlight_groups = highlights.groups()
+	local highlight_groups = highlights.groups(opts)
 
 	-- Set users highlight_group customisations.
 	if opts.highlight_groups ~= nil then
