@@ -8,6 +8,7 @@ M.groups = function ()
 		require('flexoki.highlights.mini-nvim').groups(),
 		require('flexoki.highlights.flash-nvim').groups(),
 		require('flexoki.highlights.neotree').groups(),
+		require('flexoki.highlights.todo-comments').groups(),
 		-- require('flexoki.highlights.buffer').groups(),
 		-- require('flexoki.highlights.cmp').groups(),
 		-- require('flexoki.highlights.dashboard').groups(),

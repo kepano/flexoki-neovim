@@ -1,4 +1,4 @@
-local util = {}
+local M = {}
 
 local function byte(value, offset)
 	return bit.band(bit.rshift(value, offset), 0xFF)
@@ -35,7 +35,7 @@ end
 ---@param fg string foreground color
 ---@param bg string background color
 ---@param alpha number number between 0 (background) and 1 (foreground)
-util.blend = function(fg, bg, alpha)
+M.blend = function(fg, bg, alpha)
 	local fg_rgb = rgb(parse_color(fg))
 	local bg_rgb = rgb(parse_color(bg))
 
@@ -54,7 +54,7 @@ end
 
 ---@param group string
 ---@param color table<string, any>
-util.highlight = function(group, color)
+M.highlight = function(group, color)
 	local fg = color.fg and parse_color(color.fg) or 'none'
 	local bg = color.bg and parse_color(color.bg) or 'none'
 	local sp = color.sp and parse_color(color.sp) or ''
@@ -64,11 +64,11 @@ util.highlight = function(group, color)
 		and (color.blend >= 0 or color.blend <= 100)
 		and bg ~= nil
 	then
-		bg = util.blend(bg, parse_color('base') or '', color.blend / 100)
+		bg = M.blend(bg, parse_color('base') or '', color.blend / 100)
 	end
 
 	color = vim.tbl_extend('force', color, { fg = fg, bg = bg, sp = sp })
 	vim.api.nvim_set_hl(0, group, color)
 end
 
-return util
+return M

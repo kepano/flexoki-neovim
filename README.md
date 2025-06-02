@@ -1,5 +1,5 @@
 # flexoki-neovim
-Neovim adaptation of [Flexoki](stephango.com/flexoki) by Steph Ango
+Neovim adaptation of [Flexoki](https://stephango.com/flexoki) by Steph Ango
 
 Currently still **work in progress** and missing support for even the most
 common plugins. This will be fixed shortly. If you are using a plugin that

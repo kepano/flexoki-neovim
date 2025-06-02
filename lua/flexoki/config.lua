@@ -20,6 +20,10 @@ M.options = {
 	---@type Variant
 	light_variant = 'light',
 
+	---Whether the colorscheme should automatically apply when `setup` is called
+	---@type boolean
+	auto_apply = false,
+
 	---@type table<string, vim.api.keyset.highlight>
 	highlight_groups = {},
 }

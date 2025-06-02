@@ -16,13 +16,17 @@ M.colorscheme = function(opts)
 
 	vim.g.colors_name = 'flexoki'
 
-	require('flexoki.theme').set_highlights(opts)
+	require('flexoki.theme').set_highlights(config.options)
 end
 
 ---Set up the Flexoki colorscheme
 ---@param opts FlexokiOptions
 M.setup = function (opts)
 	config.extend(opts)
+
+	if config.options.auto_apply then
+		M.colorscheme({})
+	end
 end
 
 return M

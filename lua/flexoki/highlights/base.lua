@@ -32,7 +32,7 @@ M.groups = function()
 
 		--#region Actual text highlighting
 
-		["Comment"] = { fg = c['tx-3'], bg = 'NONE', italic = true, },
+		["Comment"] = { fg = c['tx-3'], bg = 'NONE', italic = false, },
 
 		["Constant"]  = { fg = c['ye'], bg = 'NONE' },
 		["String"]    = { fg = c['cy'], bg = 'NONE' },
@@ -98,23 +98,23 @@ M.groups = function()
 		["WinBar"]   = { fg = c['tx'],   bg = c['ui-3'] },
 		["WinBarNC"] = { fg = c['tx-2'], bg = c['ui']   },
 
-		["WildMenu"]       = { fg = 'NONE',    bg = c['cy-2'] },
-		["Folded"]         = { fg = c['ui-2'], bg = c['alt_bg'] },
-		["FoldColumn"]     = { fg = c['ui-2'], bg = c['alt_bg'] },
-		["LineNr"]         = { fg = c['tx-3'], bg = 'NONE' },
-		["FloatBorder"]    = { fg = c['tx-3'], bg = c['bg-2'] },
-		["Whitespace"]     = { fg = c['tx-3'], bg = 'NONE' },
-		["WinSeparator"]   = { fg = c['ui'],   bg = c['ui'] },
-		["WinSeparatorNC"] = { fg = c['ui-3'], bg = c['ui-3'] },
-		["NormalFloat"]    = { fg = c['tx-2'], bg = c['bg-2'] },
-		["WarningMsg"]     = { fg = c['re'],   bg = c['bg'] },
+		["WildMenu"]       = { fg = 'NONE',    bg = c['cy-2']     },
+		["Folded"]         = { fg = c['ui-2'], bg = c['alt_bg']   },
+		["FoldColumn"]     = { fg = c['ui-2'], bg = c['alt_bg']   },
+		["LineNr"]         = { fg = c['tx-3'], bg = 'NONE'        },
+		["FloatBorder"]    = { fg = c['tx-3'], bg = c['bg-2']     },
+		["Whitespace"]     = { fg = c['tx-3'], bg = 'NONE'        },
+		["WinSeparator"]   = { fg = c['bg-2'], bg = c['bg-2']     },
+		["WinSeparatorNC"] = { fg = c['ui-3'], bg = c['ui-3']     },
+		["NormalFloat"]    = { fg = c['tx-2'], bg = c['bg-2']     },
+		["WarningMsg"]     = { fg = c['re'],   bg = c['bg']       },
 		["QuickFixLine"]   = { fg = 'NONE',    bg = c['ui2_blue'] },
 
 		-- The MatchWord groups don't actually exist, but we define them here
 		-- to link to them in plugin specific files instead of redefining the
 		-- same group multiple times
-		["MatchWord"]      = { fg = 'NONE', bg = c['ui-2'] },
-		["MatchParen"]     = { fg = 'NONE', bg = c['ui-2'] },
+		["MatchWord"]      = { fg = 'NONE', bg = c['ui'] },
+		["MatchParen"]     = { fg = 'NONE', bg = c['ui'] },
 		["MatchWordCur"]   = { fg = 'NONE', bg = 'NONE'  },
 		["MatchParenCur"]  = { fg = 'NONE', bg = 'NONE'  },
 
@@ -128,17 +128,28 @@ M.groups = function()
 		["Question"]   = { fg = c['orange'], bg = 'NONE' },
 
 		-- Cursor and selection related
-		["Cursor"]       = { fg = c['bg'], bg = c['tx']   },
-		["lCursor"]      = { fg = c['bg'], bg = c['tx']   },
-		["CursorLine"]   = { fg = 'NONE',  bg = c['bg-2'] },
-		["CursorLineNr"] = { fg = c['tx'], bg = 'NONE', bold = true, },
-		["CursorColumn"] = { fg = 'NONE',  bg = c['bg-2'] },
-		["ColorColumn"]  = { fg = 'NONE',  bg = c['ui']   },
-		["CursorIM"]     = { fg = c['bg'], bg = c['tx']   },
-		["TermCursor"]   = { fg = c['bg'], bg = c['tx']   },
-		["TermCursorNC"] = { fg = c['bg'], bg = c['tx-3'] },
-		["Visual"]       = { fg = 'NONE',  bg = c['ui']   },
-		["VisualNOS"]    = { fg = 'NONE',  bg = c['ui-2'] },
+		["Cursor"]       = { fg = c['bg'], bg = c['tx']             },
+		["lCursor"]      = { fg = c['bg'], bg = c['tx']             },
+		["CursorLine"]   = { fg = 'NONE',  bg = c['bg-2']           },
+		["CursorLineNr"] = { fg = c['tx'], bg = 'NONE', bold = true },
+		["CursorColumn"] = { fg = 'NONE',  bg = c['bg-2']           },
+		["ColorColumn"]  = { fg = 'NONE',  bg = c['ui']             },
+		["CursorIM"]     = { fg = c['bg'], bg = c['tx']             },
+		["TermCursor"]   = { fg = c['bg'], bg = c['tx']             },
+		["TermCursorNC"] = { fg = c['bg'], bg = c['tx-3']           },
+		["Visual"]       = { fg = 'NONE',  bg = c['ui-2']           },
+		["VisualNOS"]    = { fg = 'NONE',  bg = c['ui-3']           },
+
+		["DiagnosticError"] = { fg = c['re'] },
+		["DiagnosticWarn"] = { fg = c['ye'] },
+		["DiagnosticInfo"] = { fg = c['cy'] },
+		["DiagnosticHint"] = { fg = c['bl'] },
+		["DiagnosticOk"] = { fg = c['gr'] },
+
+
+		["Added"]   = { fg = c['gr'] },
+		["Removed"] = { fg = c['re'] },
+		["Changed"] = { fg = c['bl'] },
 	}
 end
 

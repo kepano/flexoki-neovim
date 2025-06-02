@@ -70,12 +70,12 @@ M.groups = function()
 
 		--#region mini.statusline
 
-		['MiniStatuslineModeNormal']  = { fg = c['bg'], bg = c['ye-2'] },
-		['MiniStatuslineModeInsert']  = { fg = c['bg'], bg = c['cy-2'] },
-		['MiniStatuslineModeVisual']  = { fg = c['bg'], bg = c['gr-2'] },
-		['MiniStatuslineModeReplace'] = { fg = c['bg'], bg = c['re-2'] },
-		['MiniStatuslineModeCommand'] = { fg = c['bg'], bg = c['bl-2'] },
-		['MiniStatuslineModeOther']   = { fg = c['bg'], bg = c['ma-2'] },
+		['MiniStatuslineModeNormal']  = { fg = c['bg'], bg = c['ye'] },
+		['MiniStatuslineModeInsert']  = { fg = c['bg'], bg = c['cy'] },
+		['MiniStatuslineModeVisual']  = { fg = c['bg'], bg = c['gr'] },
+		['MiniStatuslineModeReplace'] = { fg = c['bg'], bg = c['re'] },
+		['MiniStatuslineModeCommand'] = { fg = c['bg'], bg = c['bl'] },
+		['MiniStatuslineModeOther']   = { fg = c['bg'], bg = c['ma'] },
 
 		['MiniStatuslineDevinfo']  = { fg = c['tx'],   bg = c['ui-2'] },
 		['MiniStatuslineFilename'] = { fg = c['tx-2'], bg = c['ui']   },
