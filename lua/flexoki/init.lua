@@ -9,9 +9,9 @@ M.colorscheme = function(opts)
 
 	vim.o.termguicolors = true
 
+
 	if vim.g.colors_name then
-		vim.cmd('hi clear')
-		vim.cmd('syntax reset')
+		vim.cmd.hi('clear')
 	end
 
 	vim.g.colors_name = 'flexoki'
@@ -23,10 +23,6 @@ end
 ---@param opts FlexokiOptions
 M.setup = function (opts)
 	config.extend(opts)
-
-	if config.options.auto_apply then
-		M.colorscheme({})
-	end
 end
 
 return M

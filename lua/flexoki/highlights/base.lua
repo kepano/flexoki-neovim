@@ -1,9 +1,27 @@
 local palette = require('flexoki.palette')
+local config = require('flexoki.config')
 
 local M = {}
 
 M.groups = function()
 	local c = palette.palette()
+
+	local floatBg = 'bg'
+	local floatBorderBg = 'bg'
+
+	if config.options.float_window_style == 'auto' then
+		if vim.o.winborder == 'solid' then
+			floatBorderBg = 'ui'
+		elseif vim.o.winborder == 'none' or vim.o.winborder == '' then
+			floatBg = 'ui'
+		end
+	elseif config.options.float_window_style == 'borderless' then
+		floatBg = 'ui'
+	elseif config.options.float_window_style == 'solid' then
+		floatBorderBg = 'ui'
+	elseif config.options.float_window_style == 'borderless' then
+		floatBg = 'ui'
+	end
 
 	--- @type table<string, vim.api.keyset.highlight>
 	return {
@@ -98,15 +116,16 @@ M.groups = function()
 		["WinBar"]   = { fg = c['tx'],   bg = c['ui-3'] },
 		["WinBarNC"] = { fg = c['tx-2'], bg = c['ui']   },
 
+		["NormalFloat"]    = { fg = c['tx-2'], bg = c[floatBg],      },
+		["FloatBorder"]    = { fg = c['tx-3'], bg = c[floatBorderBg] },
+
 		["WildMenu"]       = { fg = 'NONE',    bg = c['cy-2']     },
 		["Folded"]         = { fg = c['ui-2'], bg = c['alt_bg']   },
 		["FoldColumn"]     = { fg = c['ui-2'], bg = c['alt_bg']   },
 		["LineNr"]         = { fg = c['tx-3'], bg = 'NONE'        },
-		["FloatBorder"]    = { fg = c['tx-3'], bg = c['bg-2']     },
 		["Whitespace"]     = { fg = c['tx-3'], bg = 'NONE'        },
 		["WinSeparator"]   = { fg = c['bg-2'], bg = c['bg-2']     },
 		["WinSeparatorNC"] = { fg = c['ui-3'], bg = c['ui-3']     },
-		["NormalFloat"]    = { fg = c['tx-2'], bg = c['bg-2']     },
 		["WarningMsg"]     = { fg = c['re'],   bg = c['bg']       },
 		["QuickFixLine"]   = { fg = 'NONE',    bg = c['ui2_blue'] },
 

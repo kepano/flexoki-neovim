@@ -1,6 +1,5 @@
 local highlights = require('flexoki.highlights')
-
-local hl = vim.api.nvim_set_hl
+local utils = require('flexoki.util')
 
 local M = {}
 
@@ -16,7 +15,7 @@ M.set_highlights = function(opts)
 	end
 
 	for group, highlight in pairs(highlight_groups) do
-		hl(0, group, highlight)
+		utils.highlight(group, highlight)
 	end
 end
 
