@@ -9,7 +9,6 @@ M.colorscheme = function(opts)
 
 	vim.o.termguicolors = true
 
-
 	if vim.g.colors_name then
 		vim.cmd.hi('clear')
 	end
