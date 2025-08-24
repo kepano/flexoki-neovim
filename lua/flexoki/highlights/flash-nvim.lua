@@ -1,3 +1,5 @@
+-- Support for https://github.com/folke/flash.nvim
+
 local palette = require('flexoki.palette')
 
 local M = {}
@@ -7,7 +9,6 @@ M.groups = function()
 
 	--- @type table<string, vim.api.keyset.highlight>
 	return {
-
 		['FlashBackdrop']   = { link = 'Comment' },
 		['FlashMatch']      = { fg   = c['bg'], bg = c['tx-3'] },
 		['FlashCurrent']    = { fg   = c['bg'], bg = c['tx'] },

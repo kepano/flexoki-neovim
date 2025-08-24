@@ -1,3 +1,5 @@
+-- Support for https://github.com/folke/todo-comments.nvim
+
 local palette = require('flexoki.palette')
 
 local M = {}

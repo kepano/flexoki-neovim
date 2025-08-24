@@ -18,7 +18,7 @@ M.groups = function ()
 		-- require('flexoki.highlights.markdown').groups(),
 		require('flexoki.highlights.nvim-tree').groups(),
 		-- require('flexoki.highlights.telescope').groups(),
-		-- require('flexoki.highlights.treesitter').groups(),
+		require('flexoki.highlights.treesitter').groups(),
 		-- require('flexoki.highlights.whichkey').groups(),
 	}
 

@@ -39,9 +39,10 @@ M.groups = function()
 		["NonText"]     = { fg = c['tx-3'], bg = 'NONE' },
 		["EndOfBuffer"] = { fg = 'NONE', bg    = 'NONE' },
 
-		["Search"]     = { fg = c['tx'], bg = c['cy-2'] },
-		["IncSearch"]  = { fg = c['tx'], bg = c['cy-2'] },
-		["Substitute"] = { fg = 'NONE',  bg = c['cy'] },
+		["Search"]     = { fg = c['tx'], bg = c['ye'] },
+		["IncSearch"]  = { fg = c['tx'], bg = c['ye'], blend = 50 },
+		["CurSearch"]  = { fg = c['tx'], bg = c['ye-2'], blend = 50 },
+		["Substitute"] = { fg = c['tx'],  bg = c['gr'], blend = 50 },
 
 		["DiffAdd"]    = { fg = c['bg'],   bg = c['gr'] },
 		["DiffChange"] = { fg = c['bg-2'], bg = c['pu'] },
@@ -56,18 +57,18 @@ M.groups = function()
 		["String"]    = { fg = c['cy'], bg = 'NONE' },
 		["Character"] = { fg = c['cy'], bg = 'NONE' },
 		["Number"]    = { fg = c['pu'], bg = 'NONE' },
-		["Boolean"]   = { fg = c['ye'], bg = 'NONE' },
+		["Boolean"]   = { fg = c['ma'], bg = 'NONE' },
 		["Float"]     = { fg = c['pu'], bg = 'NONE' },
 
 		["Identifier"] = { fg = c['bl'], bg = 'NONE' },
 		["Function"]   = { fg = c['or'], bg = 'NONE' },
 
+		["Keyword"]     = { fg   = c['gr'],   bg   = 'NONE' },
 		["Statement"]   = { fg   = 'NONE',    bg = 'NONE'   },
 		["Conditional"] = { link = 'Keyword'                },
 		["Repeat"]      = { link = 'Keyword'                },
 		["Label"]       = { link = 'Keyword'                },
 		["Operator"]    = { fg   = c['tx-2'], bg   = 'NONE' },
-		["Keyword"]     = { fg   = c['gr'],   bg   = 'NONE' },
 		["Exception"]   = { link = 'Keyword'                },
 
 		["PreProc"]   = { fg = c['ma'], bg = 'NONE' },
@@ -149,7 +150,7 @@ M.groups = function()
 		-- Cursor and selection related
 		["Cursor"]       = { fg = c['bg'], bg = c['tx']             },
 		["lCursor"]      = { fg = c['bg'], bg = c['tx']             },
-		["CursorLine"]   = { fg = 'NONE',  bg = c['bg-2']           },
+		["CursorLine"]   = { fg = 'NONE',  bg = c['ui'], blend = 65 },
 		["CursorLineNr"] = { fg = c['tx'], bg = 'NONE', bold = true },
 		["CursorColumn"] = { fg = 'NONE',  bg = c['bg-2']           },
 		["ColorColumn"]  = { fg = 'NONE',  bg = c['ui']             },
@@ -160,15 +161,15 @@ M.groups = function()
 		["VisualNOS"]    = { fg = 'NONE',  bg = c['ui-3']           },
 
 		["DiagnosticError"] = { fg = c['re'] },
-		["DiagnosticWarn"] = { fg = c['ye'] },
-		["DiagnosticInfo"] = { fg = c['cy'] },
-		["DiagnosticHint"] = { fg = c['bl'] },
-		["DiagnosticOk"] = { fg = c['gr'] },
+		["DiagnosticWarn"]  = { fg = c['ye'] },
+		["DiagnosticInfo"]  = { fg = c['cy'] },
+		["DiagnosticHint"]  = { fg = c['bl'] },
+		["DiagnosticOk"]    = { fg = c['gr'] },
 
 
 		["Added"]   = { fg = c['gr'] },
 		["Removed"] = { fg = c['re'] },
-		["Changed"] = { fg = c['bl'] },
+		["Changed"] = { fg = c['or'] },
 	}
 end
 

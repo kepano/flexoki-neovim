@@ -7,11 +7,10 @@ M.groups = function()
 
 	--- @type table<string, vim.api.keyset.highlight>
 	return {
-		['NeoTreeNormal'] = { bg = c['bg-2'] },
-		['NeoTreeNormalNC'] = { bg = c['bg-2'] },
+		['NeoTreeNormal']      = { bg = c['bg-2'] },
+		['NeoTreeNormalNC']    = { bg = c['bg-2'] },
 		['NeoTreeEndOfBuffer'] = { bg = c['bg-2'] },
-
-		['NeoTreeCursorLine'] = { bg = c['ui'] },
+		['NeoTreeCursorLine']  = { bg = c['ui']   },
 
 		['NeoTreeBufferNumber']       = { fg = 'NONE',    bg = 'NONE' },
 		['NeoTreeDimText']            = { fg = c['tx-2'], bg = 'NONE' },
