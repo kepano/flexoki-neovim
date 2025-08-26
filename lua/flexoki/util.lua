@@ -18,7 +18,7 @@ end
 ---@param color any
 ---@return nil
 local function get_color(color)
-	return require('flexoki.palette')[color]
+	return require('flexoki.palette').palette()[color]
 end
 
 ---@param fg string foreground color
